@@ -14,7 +14,7 @@ pipeline {
         stage('SCM_Checkout') {
             steps {
                 echo 'Perform SCM Checkout'
-				git 'https://github.com/LoksaiETA/SA11-BankingApp.git'
+				git 'https://github.com/Kanakamahalaxmi/SA11-BankingApp.git'
             }
         }
         stage('Application_Build') {
