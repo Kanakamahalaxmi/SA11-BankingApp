@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: bankapp-eta-app
+        app: bankapp-eta-app1
     spec:
       containers:
       - name: bankapp-eta-container
