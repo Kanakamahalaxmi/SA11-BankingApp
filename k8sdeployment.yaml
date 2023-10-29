@@ -8,11 +8,11 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: bankapp-eta-app1
+      app: bankapp-eta-app
   template:
     metadata:
       labels:
-        app: bankapp-eta-app1
+        app: bankapp-eta-app
     spec:
       containers:
       - name: bankapp-eta-container
@@ -28,7 +28,7 @@ metadata:
     app: bankapp-eta-app1
 spec:
   selector:
-    app: bankapp-eta-app1
+    app: bankapp-eta-app
 
   type: NodePort
   ports:
