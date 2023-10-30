@@ -1,21 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bankapp-eta-deploy
-  labels:
-    app: bankapp-eta-app
+  name: bankapp
+  
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: bankapp-eta-app
+      app: bankapp
   template:
     metadata:
       labels:
-        app: bankapp-eta-app
+        app: bankapp
     spec:
       containers:
-      - name: bankapp-eta-container
+      - name: banking container
         image: lithika/bankapp-eta-app:latest
         ports:
         - containerPort: 8081
@@ -23,15 +22,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: bankapp-eta-deploy
-  labels:
-    app: bankapp-eta-app
+  name: bankapp
+ 
 spec:
-  selector:
-    app: bankapp-eta-app
-
+ 
   type: NodePort
   ports:
-  - nodePort: 31101   
+  - nodePort: 31102 
     port: 8081
     targetPort: 8081
+
+  selector:
+    app: bankapp
